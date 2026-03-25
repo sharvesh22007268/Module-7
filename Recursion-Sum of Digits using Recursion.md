@@ -1,45 +1,36 @@
-# 🔁 Recursion:Palindrome Checker Using Recursion in Python
+# 📐 Taylor Series Using Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to check whether a given string is a **palindrome** using **recursion**.
-
----
+To write a Python program to evaluate a **Taylor Series** using **recursion**, where values of `x` and `n` are taken from the user.
 
 ## 🧠 ALGORITHM:
 
 1. **Start**
-2. Define a recursive function `is_palindrome(word)`
-   - **Base Case:** If the string length is less than 1, return `True`
-   - **Recursive Case:** If the first and last characters match, call the function recursively on the substring without first and last characters
-   - Else, return `False`
-3. Get input from the user
-4. Call the recursive function
-5. Print whether the string is a palindrome
+2. Create variables `x` and `n`
+3. Get values for `x` and `n` from the user
+4. Define a recursive function `series(x, n)`
+   - **Base case:** If `n == 0`, return 1
+   - **Recursive case:** Return `x**n / n + series(x, n-1)`
+5. Print the result
 6. **Stop**
-
----
 
 ## 💻 PROGRAM:
 ```
-def is_palindrome(word): if 
-len(word)<1:
-return True 
-else:
-if word[0]==word[-1]:
-return is_palindrome(word[1:-1]) else:
-return False word
-= str(input())
-if is_palindrome(word)==True: print("String
-is a palindrome")
-else:
-print("String is not a palindrome")
+def series(x,n):
+if n==0:
+return
+1 else:
+return
+x**n/n+series(x,n-1) x = 
+int(input())
+n = 
+int(input()) 
+print(series(x))
 ```
 
 ## OUTPUT
-<img width="553" height="263" alt="image" src="https://github.com/user-attachments/assets/83cd1287-9d1d-46ca-aa41-6addb1bb7aaf" />
-
+<img width="478" height="195" alt="image" src="https://github.com/user-attachments/assets/feaf6d0e-79a3-46bf-be5f-8250f6d83893" />
 
 
 ## RESULT
-Thus, the given program is implemented and executed successfully .
-
+Thus, the given program is implemented and executed successfully
