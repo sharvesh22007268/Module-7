@@ -1,48 +1,36 @@
-# 📐 Taylor Series:sinh(x) Evaluation using Recursion in Python
+# 📐 Taylor Series Using Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to evaluate the value of **sinh(x)** for **n terms** using recursion.
-
----
+To write a Python program to evaluate a **Taylor Series** using **recursion**, where values of `x` and `n` are taken from the user.
 
 ## 🧠 ALGORITHM:
 
 1. **Start**
-2. Read input for variable `x` (angle or number)
-3. Read input for variable `n` (number of terms)
-4. Define a function `fact(n)`:
-   - If `n <= 1`, return 1
-   - Else, return `n * fact(n - 1)` (recursive factorial)
-5. Define a function `sinh(x, n)`:
-   - If `n == 0`, return `x`
-   - Else, return `(pow(x, 2*n + 1) / fact(2*n + 1)) + sinh(x, n - 1)`
-6. Call the `sinh(x, n)` function and print the result
-7. **Stop**
-
----
+2. Create variables `x` and `n`
+3. Get values for `x` and `n` from the user
+4. Define a recursive function `series(x, n)`
+   - **Base case:** If `n == 0`, return 1
+   - **Recursive case:** Return `x**n / n + series(x, n-1)`
+5. Print the result
+6. **Stop**
 
 ## 💻 PROGRAM:
 ```
-def fact(n): 
-if n<=1:
-return 1 
-else:
-return n*fact(n-1) 
-def sinh(x,n):
+def series(x,n):
 if n==0:
-return x 
-else:
-return (pow(x,(2*n+1))/fact(2*n+1))+sinh(x,n-1) 
-x=int(input())
-n=int(input()) 
-print(sinh(x,n))
+return
+1 else:
+return
+x**n/n+series(x,n-1) x = 
+int(input())
+n = 
+int(input()) 
+print(series(x))
 ```
 
-ADD CODE HERE
-
 ## OUTPUT
-<img width="364" height="169" alt="image" src="https://github.com/user-attachments/assets/5bda51b7-5bbf-440e-b950-6639d77a990c" />
+<img width="478" height="195" alt="image" src="https://github.com/user-attachments/assets/feaf6d0e-79a3-46bf-be5f-8250f6d83893" />
 
 
 ## RESULT
-Thus the program has been successfully executed
+Thus, the given program is implemented and executed successfully
